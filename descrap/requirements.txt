@@ -5,11 +5,13 @@ Django==5.0.1
 django-widget-tweaks==1.5.0
 exceptiongroup==1.2.0
 executing==2.0.1
+gunicorn==21.2.0
 ipython==8.20.0
 jedi==0.19.1
 matplotlib-inline==0.1.6
 numpy==1.26.3
 opencv-python==4.9.0.80
+packaging==23.2
 pandas==2.2.0
 parso==0.8.3
 pexpect==4.9.0
