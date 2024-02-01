@@ -1,5 +1,6 @@
 from pathlib import Path
 import os
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -13,7 +14,7 @@ SECRET_KEY = "django-insecure-krqc(1q+o(#c54f^(cb53e-1y3m#+$%$8mid=b2grt2)gljk%v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['descrap.onrender.com','127.0.0.1']
+ALLOWED_HOSTS = ['descrap.onrender.com','127.0.0.1',".vercel.app", ".now.sh"]
 
 
 # Application definition
@@ -70,7 +71,7 @@ DATABASES = {
         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
-
+DATABASES['default']= dj_database_url.parse("postgres://default:GD61XqAPRNhs@ep-plain-thunder-a1sjcql1.ap-southeast-1.postgres.vercel-storage.com:5432/verceldb")
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
